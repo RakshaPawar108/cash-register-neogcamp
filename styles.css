@@ -1,9 +1,95 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
 
+:root {
+    --primary-color: #f28749;
+    --secondary-color: #262626;
+    --tertiary-color: #f2e291;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    width: 50vw;
+body{
+    margin:0 0;
+    padding:0 0;
+    font-family: 'Oswald',
+    sans-serif;
 }
+
+.container-center {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:7rem;
+    margin-bottom:7rem;
+    padding:1rem;
+    width: 45vw;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.heading {
+    font-size: 2rem;
+    color:var(--secondary-color);
+    font-weight: bolder;
+}
+
+.description {
+    font-size: 18px;
+}
+
+#bill-amount, #cash-given {
+    padding:0.5rem;
+    margin:1rem;
+}
+
+label {
+    font-weight: bolder;
+}
+
+#check-btn {
+    background-color: bisque;
+    color: var(--secondary-color);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding:0.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size:normal;
+    
+}
+
+.change-table {
+    border-collapse: collapse;
+    width:100%;
+    padding:1rem;
+    margin:25px 0;
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+th, tr {
+    border:thin solid var(--secondary-color);
+    background-color: var(--tertiary-color);
+    text-align: center;
+}
+
+th, td {
+    border:thin solid var(--secondary-color);
+    padding: 10px 10px;
+}
+
+caption {
+    margin: 1rem;
+    font-weight: bolder;
+    font-size: large;
+}
+
