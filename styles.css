@@ -51,7 +51,7 @@ label {
     font-weight: bolder;
 }
 
-#check-btn {
+#check-btn, #show-btn {
     background-color: bisque;
     color: var(--secondary-color);
     border-radius: 10px;

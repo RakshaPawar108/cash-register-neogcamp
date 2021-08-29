@@ -4,10 +4,21 @@ const checkBtn = document.getElementById("check-btn");
 const cashGiven = document.getElementById("cash-given");
 const errorMessage = document.getElementById("error-message");
 const noOfNotes = document.querySelectorAll(".no-of-notes");
+const labelOne = document.getElementById("label1");
+const showBtn = document.getElementById("show-btn");
 
 const denominations = [2000, 500, 100, 20, 10, 5, 1];
 
 // Event Handlers
+
+function validateAmt() {
+  if (billAmount.value > 0) {
+    showInput();
+  } else {
+    showMessage("Please enter the bill amount first.");
+  }
+}
+
 function validateBillAndCashAmount() {
   hideMessage();
   if (billAmount.value > 0) {
@@ -31,6 +42,19 @@ function calculateChange(amountReturned) {
   }
 }
 
+function hideInput() {
+  checkBtn.style.display = "none";
+  cashGiven.style.display = "none";
+  labelOne.style.display = "none";
+}
+
+function showInput() {
+  checkBtn.style.display = "block";
+  cashGiven.style.display = "block";
+  labelOne.style.display = "block";
+  showBtn.style.display = "none";
+}
+
 function hideMessage() {
   errorMessage.style.display = "none";
 }
@@ -39,5 +63,8 @@ function showMessage(message) {
   errorMessage.innerText = message;
 }
 
+hideInput();
+
 // Event Listeners
 checkBtn.addEventListener("click", validateBillAndCashAmount);
+showBtn.addEventListener("click", validateAmt);
